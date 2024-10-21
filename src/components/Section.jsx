@@ -10,7 +10,7 @@ const Section = ({ title, children, ...props }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <LinkedInIcon />
+          <LinkedInIcon sx={{color: '#345678'}}/>
         </a>
       </div>
       {children}

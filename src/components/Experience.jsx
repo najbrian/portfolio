@@ -2,6 +2,7 @@ import { EXPERIENCES } from "../resume.js";
 import { useState } from "react";
 import Section from "./Section.jsx";
 import TabButton from "./TabButton.jsx";
+import { Box, Typography, Paper } from "@mui/material";
 
 const Experience = () => {
   const [selectedExperience, setSelectedExperience] = useState(null);
@@ -12,9 +13,31 @@ const Experience = () => {
   };
 
   return (
-    <div className="flex-col justify-center items-center relative m-5 font-inter">
-
-      <div className="relative z-10 p-6 rounded-lg w-1/2 mx-auto bg-white bg-opacity-60 transition-all duration-300 shadow-lg hover:bg-opacity-80 max-w-screen-lg">
+    <Box
+      className="flex-col justify-center items-center relative"
+      sx={{ m: 5, fontFamily: 'Inter' }}
+    >
+      <Paper
+        elevation={3}
+        sx={{
+          position: 'relative',
+          zIndex: 10,
+          p: 6,
+          borderRadius: '16px',
+          width: {
+            xs: '90%',   // Adjust for smaller screens
+            sm: '75%',   // For small screens
+            md: '50%',   // For medium screens
+            lg: '40%',   // For large screens
+          },
+          mx: 'auto',
+          backgroundColor: 'rgba(255, 255, 255, 0.6)', // White with opacity
+          transition: 'background-color 0.3s',
+          '&:hover': {
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          },
+        }}
+      >
         <Section title="" id="experiences">
           <TabButton
             placeholder="Experiences"
@@ -24,39 +47,59 @@ const Experience = () => {
           />
 
           {!selectedExperience && (
-            <p className="mt-5">Select a previous role to learn more.</p>
+            <Typography
+              variant="body2"
+              sx={{ mt: 5, fontSize: { xs: '0.875rem', md: '1rem' } }}
+            >
+              Select a previous role to learn more.
+            </Typography>
           )}
+
           {selectedExperience && (
-            <div id="tab-content" className="flex justify-center gap-2 mt-5">
-              <div>
-                <h3 className="mb-1">Role:</h3>
-                <div>
-                  <p className="mb-5 text-base">
-                    <span className='italic'>{selectedExperience.position}</span>
-                    {" "}at{" "}
-                    <span className="font-bold">
-                      {selectedExperience.company}
-                    </span>
-                  </p>
-                </div>
-                <p className="absolute text-xs">
-                  {selectedExperience.start_date} -{" "}
-                  {selectedExperience.end_date}
-                </p>
-              </div>
-              <div>
-                <h3>Responsibilities:</h3>
+            <Box id="tab-content" display="flex" justifyContent="center" gap={2} sx={{ mt: 5 }}>
+              <Box>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ mb: 1, fontSize: { xs: '0.875rem', md: '1rem' } }}
+                >
+                  Role:
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ mb: 5, fontSize: { xs: '0.875rem', md: '1rem' } }}
+                >
+                  <span className='italic'>{selectedExperience.position}</span> at{" "}
+                  <span className="fontBold">{selectedExperience.company}</span>
+                </Typography>
+                <Typography variant="caption" sx={{ position: 'absolute' }}>
+                  {selectedExperience.start_date} - {selectedExperience.end_date}
+                </Typography>
+              </Box>
+              <Box>
+                <Typography variant="subtitle1">Responsibilities:</Typography>
                 <ul>
-                  <li className="m-2">{selectedExperience.description1}</li>
-                  <li className="m-2">{selectedExperience.description2}</li>
-                  <li className="m-2">{selectedExperience.description3}</li>
+                  <li>
+                    <Typography sx={{ m: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                      {selectedExperience.description1}
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography sx={{ m: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                      {selectedExperience.description2}
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography sx={{ m: 2, fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                      {selectedExperience.description3}
+                    </Typography>
+                  </li>
                 </ul>
-              </div>
-            </div>
+              </Box>
+            </Box>
           )}
         </Section>
-      </div>
-    </div>
+      </Paper>
+    </Box>
   );
 };
 

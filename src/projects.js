@@ -1,0 +1,33 @@
+export const PROJECTS = [
+  {
+    project_img: 'https://camo.githubusercontent.com/e1fe4eedcb118668f4e55f5ce21fcfdc7d8258350296bf6dbc65c94487c10462/68747470733a2f2f692e696d6775722e636f6d2f6b5a71375561702e706e67',
+    name: 'BudgetWise',
+    description: 'BudgetWise helps you effortlessly track and optimize your finances with our intuitive budget manager.',
+    description_2: 'Take control of your finances with ease. Track spending, set goals, and get insightful reports—all in one place. Start optimizing your budget today.',
+    tech_used: 'React, Node.js, JWT, JavaScript, HTML, CSS, Styled Components, MUI, Chart.js',
+    live_link: 'https://budgetwise-app.netlify.app/',
+    frontend_github: 'https://github.com/najbrian/budgetwise-front-end',
+    backend_github: 'https://github.com/najbrian/budgetwise-back-end',
+    github: '',
+  },
+  {
+    project_img: 'https://camo.githubusercontent.com/e96b9e295531fdc14e405a205df94f8bcefc94184e7e0b24d439d723cfe4a7b4/68747470733a2f2f696d6775722e636f6d2f696933365076742e706e67',
+    name: 'Brian\'s BlackJack Table',
+    description: "At Brian's Blackjack table, play single-deck Blackjack with unique rules. A Blackjack ends the round, and a player Blackjack pays 3:2 with payouts rounded up. Place bets using chips from $1 to $500, and if you run out of money, hit 'Play again' to reset your funds to $1000. Good luck!",
+    tech_used: 'JavaScript, HTML, CSS',
+    live_link: 'https://najbrian.github.io/browser-based-game-blackjack/',
+    frontend_github: '',
+    backend_github: '',
+    github: 'https://github.com/najbrian/browser-based-game-blackjack?tab=readme-ov-file',
+  },
+  {
+    project_img: 'https://camo.githubusercontent.com/9c0ccb41c511e15cf8bd9aba49c9c76001015f59a87ff2289b436113d12b728f/68747470733a2f2f692e696d6775722e636f6d2f684250643937442e706e67',
+    name: 'Watch World',
+    description: 'Watch World is an app where users can sign up and share all the watches in their collection! This app allows users to see the diverse world of watches from vintage to brand new watches.',
+    tech_used: 'JavaScript, CSS, Node.js, Express, MongoDB',
+    live_link: 'https://watch-collection-app-158f655f9867.herokuapp.com',
+    frontend_github: '',
+    backend_github: '',
+    github: 'https://github.com/najbrian/watch-collection-app',
+  },
+]

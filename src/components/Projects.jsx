@@ -5,7 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Projects = () => {
   return (
-    <div className="flex-col justify-center font-inter projects m-20">
+    <div className="flex-col justify-center font-inter projects xs:m-4 md:m-20">
       <div className="relative z-10 p-6 rounded-lg w-full mx-auto flex justify-center">
         <h3 className="text-[#345678] font-bold xs:text-lg md:text-2xl">Projects</h3>
       </div>
@@ -31,26 +31,26 @@ const Projects = () => {
                 {project.tech_used}
               </p>
               <Stack spacing={2} direction="row" className="mt-4">
-                <Button variant="contained" sx={{ background: "black" }}>
+                <Button variant="contained" sx={{ background: "black"}}>
                   <a
                     href={project.live_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white"
+                    className="text-white text-xs"
                   >
                     Go Live
                   </a>
                 </Button>
 
                 {project.github ? (
-                  <Button variant="contained">
+                  <Button variant="contained" sx={{fontSize: { xs: "0.66rem", md: "1rem"}}}>
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white"
+                      className="text-white text-xs"
                     >
-                      <GitHubIcon className="mr-1" /> Link
+                      <GitHubIcon className="mr-1" sx={{fontSize: { xs: "0.7rem", md: "1rem"}}} /> Link
                     </a>
                   </Button>
                 ) : (
@@ -60,9 +60,9 @@ const Projects = () => {
                         href={project.frontend_github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white"
+                        className="text-white text-xs"
                       >
-                        <GitHubIcon className="mr-1" /> Frontend
+                        <GitHubIcon className="mr-1" sx={{fontSize: { xs: "0.7rem", md: "1rem"}}}/> Frontend
                       </a>
                     </Button>
                     <Button variant="contained">
@@ -70,9 +70,9 @@ const Projects = () => {
                         href={project.backend_github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white"
+                        className="text-white text-xs"
                       >
-                        <GitHubIcon className="mr-1" /> Backend
+                        <GitHubIcon className="mr-1" sx={{fontSize: { xs: "0.7rem", md: "1rem"}}}/> Backend
                       </a>
                     </Button>
                   </>

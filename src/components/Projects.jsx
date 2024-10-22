@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div className="flex-col justify-center font-inter projects m-20">
       <div className="relative z-10 p-6 rounded-lg w-full mx-auto flex justify-center">
-        <h3 className="text-[#345678] font-bold xs:text-sm md:text-lg lg:text-2xl">Projects</h3>
+        <h3 className="text-[#345678] font-bold xs:text-lg md:text-2xl">Projects</h3>
       </div>
       <div className="max-w-screen-lg mx-auto">
         {PROJECTS.map((project) => (

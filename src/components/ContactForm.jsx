@@ -37,13 +37,13 @@ const ContactForm = () => {
       <section className="flex justify-center items-center h-screen font-inter">
         <form
           onSubmit={onSubmit}
-          className="max-w-[600px] mx-auto bg-white rounded-lg p-5"
+          className="xs:max-w-[400px] md:max-w-[600px] mx-auto bg-white rounded-lg p-5"
         >
-          <h2 className="text-2xl font-bold text-center text-[#345678]">Contact Me</h2>
+          <h2 className="xs:text-lg md:text-xl font-bold text-center text-[#345678]">Contact Me</h2>
           <div className="m-5">
-            <label className='text-[#345678]'>Full Name</label>
+            <label className='text-[#345678] xs:text-sm md:text-base'>Full Name</label>
             <input
-              className="w-full bg-transparent border-2 rounded-md outline-none p-2 text-[#333]"
+              className="w-full bg-transparent border-2 rounded-md outline-none p-2 text-[#333] xs:text-sm md:text-base"
               type="text"
               placeholder="Enter your name"
               name="name"
@@ -51,9 +51,9 @@ const ContactForm = () => {
             />
           </div>
           <div className="m-5">
-            <label className='text-[#345678]'>Email Address</label>
+            <label className='text-[#345678] xs:text-sm md:text-base'>Email Address</label>
             <input
-              className="w-full bg-transparent border-2 rounded-md outline-none p-2 text-[#333]"
+              className="w-full bg-transparent border-2 rounded-md outline-none p-2 text-[#333] xs:text-sm md:text-base"
               type="email"
               placeholder="Enter your email"
               name="email"
@@ -61,15 +61,15 @@ const ContactForm = () => {
             />
           </div>
           <div className="m-5">
-            <label className='text-[#345678]'>Your Message</label>
+            <label className='text-[#345678] xs:text-sm md:text-base'>Your Message</label>
             <textarea
-              className="w-full h-56 resize-none bg-transparent border-2 rounded-md outline-none p-2 text-[#333]"
+              className="w-full h-56 resize-none bg-transparent border-2 rounded-md outline-none p-2 text-[#333] xs:text-sm md:text-base"
               name="message"
               placeholder="Enter your message"
             ></textarea>
           </div>
           <div className="flex justify-center">
-            <Button type="submit" variant="contained">
+            <Button type="submit" variant="contained" sx={{fontSize: { xs: "0.66rem", md: "1rem" }}}>
               Send Message
             </Button>
           </div>
@@ -78,24 +78,27 @@ const ContactForm = () => {
               href="https://www.linkedin.com/in/nabrian/"
               target="_blank"
               rel="noopener noreferrer"
+              className='xs:text-xs md:text-md lg:text-lg'
             >
-              <LinkedInIcon sx={{ color: "#345678" }} />
+              <LinkedInIcon sx={{ color: "#345678",fontSize: { xs: "0.66rem", md: "1.5rem" } }} />
               nabrian
             </a>
             <a
               href="https://github.com/najbrian"
               target="_blank"
               rel="noopener noreferrer"
+              className='xs:text-xs md:text-md lg:text-lg'
             >
-              <GitHubIcon sx={{ color: "#345678" }} />
+              <GitHubIcon sx={{ color: "#345678",fontSize: { xs: "0.66rem", md: "1.5rem" } }} />
               najbrian
             </a>
             <a
               href="mailto:najbrian@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
+              className='xs:text-xs md:text-md lg:text-lg'
             >
-              <EmailIcon sx={{ color: "#345678" }} />
+              <EmailIcon sx={{ color: "#345678",fontSize: { xs: "0.66rem", md: "1.5rem" } }} />
               najbrian@gmail.com
             </a>
           </div>

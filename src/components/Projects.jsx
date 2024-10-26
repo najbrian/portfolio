@@ -13,7 +13,7 @@ const Projects = () => {
         {PROJECTS.map((project) => (
           <div
             key={project.name}
-            className="bg-white flex justify-between items-center p-6 rounded-lg shadow-md h-auto transition-transform duration-300 transform hover:scale-105 group z-10 w-full mx-auto xs:bg-opacity-80 bg-opacity-60 hover:bg-opacity-80 mb-10"
+            className="bg-white flex p-6 rounded-lg shadow-md h-auto transition-transform duration-300 transform hover:scale-105 group z-10 w-full mx-auto xs:bg-opacity-80 bg-opacity-60 hover:bg-opacity-80 mb-10"
           >
             {/* Left Section: Project Details */}
             <div className="xs:w-full md:w-1/2 flex flex-col justify-center">

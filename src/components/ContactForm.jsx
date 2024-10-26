@@ -37,7 +37,7 @@ const ContactForm = () => {
       <section className="flex justify-center items-center h-screen font-inter">
         <form
           onSubmit={onSubmit}
-          className="xs:max-w-[400px] md:max-w-[600px] mx-auto bg-white rounded-lg p-5"
+          className="mx-auto bg-white rounded-lg p-5"
         >
           <h2 className="xs:text-lg md:text-xl font-bold text-center text-[#345678]">Contact Me</h2>
           <div className="m-5">

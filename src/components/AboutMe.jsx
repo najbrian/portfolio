@@ -10,11 +10,11 @@ const AboutMe = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center relative m-5">
+      <div className="flex justify-center items-center relative xs:m-5 md:m-20">
         <div
           className={`relative z-10 p-6 transition-all duration-300 rounded-xl ${
             aboutMe ? "bg-white shadow-lg" : "bg-none"
-          } mx-auto cursor-pointer xs:w-full md:w-3/4`}
+          } mx-auto cursor-pointer w-full`}
           onClick={toggleAboutMe}
         >
           <img
@@ -32,7 +32,7 @@ const AboutMe = () => {
             </h1>
           )}
           <div
-            className={`overflow-hidden transition-all duration-500 ease-in-out ${
+            className={`overflow-hidden transition-all duration-200 ease-in-out ${
               aboutMe ? "max-h-screen" : "max-h-0"
             }`}
           >

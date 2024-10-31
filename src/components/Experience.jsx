@@ -15,8 +15,8 @@ const Experience = () => {
   };
 
   return (
-    <div className="flex-col justify-center items-center relative m-5 font-inter">
-      <div className="relative z-10 p-6 rounded-lg mx-auto xs:w-full md:w-3/4 bg-white bg-opacity-100 shadow-lg xs:mb-36">
+    <div className="flex-col justify-center items-center relative xs:m-5 md:m-20 font-inter">
+      <div className="relative z-10 p-6 rounded-lg mx-auto w-full bg-white bg-opacity-100 shadow-lg xs:mb-36">
         <Section title="" id="experiences">
           {/* <div className='xs:hidden md:block'>
             <TabButton
@@ -59,7 +59,7 @@ const Experience = () => {
                     </span>
                   </p>
                 </div>
-                <p className="absolute xs:hidden md:text-xs">
+                <p className="absolute xs:hidden md:block md:text-xs">
                   {selectedExperience.start_date} -{" "}
                   {selectedExperience.end_date}
                 </p>
